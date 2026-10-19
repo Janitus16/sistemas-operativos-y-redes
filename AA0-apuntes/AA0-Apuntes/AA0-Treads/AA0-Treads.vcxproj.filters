@@ -24,6 +24,9 @@
     <ClCompile Include="Utils\ConsoleControl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="3NodeMap\Vector2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="1TutorialTread\TreadTutorial.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="2InputSystem\InputsConsts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3NodeMap\Vector2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
