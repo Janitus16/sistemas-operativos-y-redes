@@ -1,5 +1,5 @@
 #include "InputSystem.h"
-#include "../Utils/ConsoleControl.h"
+#include "../ConsoleControl/ConsoleControl.h"
 
 InputSystem::KeyBinding::KeyBinding(int key, OnKeyPress onKeyPress)
 {

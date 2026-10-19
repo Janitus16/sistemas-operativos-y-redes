@@ -147,6 +147,7 @@
     <ClInclude Include="ConsoleControl\ConsoleControl.h" />
     <ClInclude Include="InputSystem\InputsConsts.h" />
     <ClInclude Include="InputSystem\InputSystem.h" />
+    <ClInclude Include="Timers\Timer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
