@@ -143,6 +143,7 @@
     <ClCompile Include="2InputSystem\InputSystem.cpp" />
     <ClCompile Include="3NodeMap\INodeContent.cpp" />
     <ClCompile Include="3NodeMap\Node.cpp" />
+    <ClCompile Include="3NodeMap\NodeMap.cpp" />
     <ClCompile Include="Utils\ConsoleControl.cpp" />
     <ClCompile Include="3NodeMap\Vector2.cpp" />
   </ItemGroup>
@@ -152,6 +153,7 @@
     <ClInclude Include="2InputSystem\InputSystem.h" />
     <ClInclude Include="3NodeMap\INodeContent.h" />
     <ClInclude Include="3NodeMap\Node.h" />
+    <ClInclude Include="3NodeMap\NodeMap.h" />
     <ClInclude Include="Utils\ConsoleControl.h" />
     <ClInclude Include="3NodeMap\Vector2.h" />
   </ItemGroup>

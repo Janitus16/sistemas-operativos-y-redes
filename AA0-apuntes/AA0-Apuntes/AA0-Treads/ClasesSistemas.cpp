@@ -4,6 +4,15 @@
 #include "2InputSystem/InputSystem.h"
 
 
+class Patata {
+public:
+	Patata();
+	~Patata();
+
+private:
+
+};
+
 void CuandoPresiono1() {
 	CC::Lock();
 	std::cout << "Pressed 1" << std::endl;
@@ -61,6 +70,14 @@ int main()
 	CC::Lock();
 	std::cout << "Pressed " << testFunc(5, 3) << std::endl;
 	CC::Unlock();
+
+	Patata* patata = new Patata();
+
+	Node* node = new Node(Vector2(0, 0));
+
+	node->SetContent(patata);
+
+	patata = node->GetContent<patata>();
 
 	while (true) {
 

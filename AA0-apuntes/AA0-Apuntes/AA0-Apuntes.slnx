@@ -5,4 +5,5 @@
   </Configurations>
   <Project Path="AA0-Treads/AA0-Treads.vcxproj" Id="7b20d536-b420-4486-a15c-156970668dd9" />
   <Project Path="AAx-PreguntasRespuestas/AAx-PreguntasRespuestas.vcxproj" Id="8528a30a-a14e-4cbc-9ac9-81e136adca74" />
+  <Project Path="StaticVSDinamic/StaticVSDinamic.vcxproj" Id="cc55af0d-3663-419e-baa3-71778483c4ca" />
 </Solution>
