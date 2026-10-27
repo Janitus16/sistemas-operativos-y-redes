@@ -33,12 +33,12 @@ void NodeMap::UnSafeDraw()
 	}
 }
 
-void NodeMap::SafePickNode(std::list<Vector2> position, SafeMultiPick safeMultiPickAction)
+void NodeMap::SafePickNode(Vector2 position, SafePick safePickAction)
 {
 	_sizeMutex.lock();
 	_gridMutex.lock();
 
-	Node* node = UnSafeGetNode(pos);
+	Node* node = UnSafeGetNode(position);
 
 	_gridMutex.unlock();
 	_sizeMutex.unlock();
@@ -50,30 +50,33 @@ void NodeMap::SafePickNode(std::list<Vector2> position, SafeMultiPick safeMultiP
 
 void NodeMap::SafeMultiPickNode(std::list<Vector2> positions, SafeMultiPick safeMultiPickAction) {
 	std::list<Node*> nodes = std::list<Node*>();
-	
+
 	_sizeMutex.lock();
 	_gridMutex.lock();
-
 	for (Vector2 pos : positions) {
 		Node* node = UnSafeGetNode(pos);
-		nodes.push_back();
+		nodes.push_back(node);
 	}
-
-	_safeMultiNodeLockMutex.lock();
-
 	_gridMutex.unlock();
-	for (Node* node : nodes) {
-		if (node != nullptr)
-			node->Lock();
-	}
+	_sizeMutex.unlock();
 
-	_safeMultiNodeLockMutex.unlock();
+	std::list<Node*> nodesToLock = nodes;
+	nodesToLock.sort();
+	nodesToLock.unique();
+
+	for (Node* node : nodesToLock) {
+		if (node != nullptr) node->Lock();
+	}
 
 	safeMultiPickAction(nodes);
+
+	for (Node* node : nodesToLock) {
+		if (node != nullptr) node->UnLock();
+	}
 }
 
 Node* NodeMap::UnSafeGetNode(Vector2 position) {
-	if (position.X >= _size.X | position.Y >= _size.Y || position.X < 0 || position.Y < 0) {
+	if (position.X >= _size.X || position.Y >= _size.Y || position.X < 0 || position.Y < 0) {
 		return nullptr;
 	}
 

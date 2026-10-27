@@ -1,0 +1,18 @@
+[
+	{
+		"ICodableType" : "class Banana",
+		"bananidad" : 0,
+		"hexColor" : "",
+		"semillas" : 0
+	},
+	{
+		"ICodableType" : "class Manzana",
+		"hexColor" : "",
+		"manzanidad" : 0,
+		"semillas" : 0
+	},
+	{
+		"hexColor" : "",
+		"semillas" : 0
+	}
+]

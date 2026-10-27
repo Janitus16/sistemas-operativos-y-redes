@@ -111,6 +111,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,11 +140,16 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="4Json\Banana.cpp" />
+    <ClCompile Include="4Json\Fruta.cpp" />
+    <ClCompile Include="4Json\Manzana.cpp" />
     <ClCompile Include="ClasesSistemas.cpp" />
     <ClCompile Include="2InputSystem\InputSystem.cpp" />
     <ClCompile Include="3NodeMap\INodeContent.cpp" />
     <ClCompile Include="3NodeMap\Node.cpp" />
     <ClCompile Include="3NodeMap\NodeMap.cpp" />
+    <ClCompile Include="dist\jsoncpp.cpp" />
+    <ClCompile Include="ICodable.cpp" />
     <ClCompile Include="Utils\ConsoleControl.cpp" />
     <ClCompile Include="3NodeMap\Vector2.cpp" />
   </ItemGroup>
@@ -154,8 +160,17 @@
     <ClInclude Include="3NodeMap\INodeContent.h" />
     <ClInclude Include="3NodeMap\Node.h" />
     <ClInclude Include="3NodeMap\NodeMap.h" />
+    <ClInclude Include="4Json\Banana.h" />
+    <ClInclude Include="4Json\Fruta.h" />
+    <ClInclude Include="4Json\Manzana.h" />
+    <ClInclude Include="dist\json\json-forwards.h" />
+    <ClInclude Include="dist\json\json.h" />
+    <ClInclude Include="ICodable.h" />
     <ClInclude Include="Utils\ConsoleControl.h" />
     <ClInclude Include="3NodeMap\Vector2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlayerParseTest.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -36,6 +36,21 @@
     <ClCompile Include="3NodeMap\NodeMap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="dist\jsoncpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="4Json\Banana.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="4Json\Fruta.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="4Json\Manzana.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ICodable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="1TutorialTread\TreadTutorial.h">
@@ -62,5 +77,26 @@
     <ClInclude Include="3NodeMap\NodeMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="dist\json\json.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dist\json\json-forwards.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="4Json\Banana.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="4Json\Fruta.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="4Json\Manzana.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ICodable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlayerParseTest.json" />
   </ItemGroup>
 </Project>
